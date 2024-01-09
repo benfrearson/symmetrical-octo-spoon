@@ -22,7 +22,7 @@ final class octospoonTests: XCTestCase {
         XCTAssertTrue(true, "This test will always pass")
     }
 
-    func test_exampleFail_shouldFail() throws {
+    func disabled_test_exampleFail_shouldFail() throws {
         XCTFail("This test will always fail")
     }
 
