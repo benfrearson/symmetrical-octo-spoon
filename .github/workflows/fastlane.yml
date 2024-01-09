@@ -5,10 +5,7 @@ on:
       - 'main'
 jobs:
   build:
-    runs-on: macos-latest 
+    runs-on: macos-13
     steps:
-      - uses: maxim-lobanov/setup-xcode@v1
-        with:
-            xcode-version: latest
       - uses: actions/checkout@v2
       - run: fastlane tests
