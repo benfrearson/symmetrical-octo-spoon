@@ -21,7 +21,23 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 [bundle exec] fastlane ios tests
 ```
 
-Description of what the lane does
+Run tests
+
+### ios release
+
+```sh
+[bundle exec] fastlane ios release
+```
+
+Deploy to App Store
+
+### ios certify
+
+```sh
+[bundle exec] fastlane ios certify
+```
+
+Will get provisioning profiles for development and releases for the current environment.
 
 ----
 

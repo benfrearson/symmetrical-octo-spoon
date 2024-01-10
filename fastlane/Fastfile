@@ -16,9 +16,35 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Description of what the lane does"
+  desc "Run tests"
   lane :tests do
     setup_ci if ENV['CI']
     run_tests(scheme: "octospoon")
+  end
+
+  desc "Deploy to App Store"
+  lane :release do
+    sync_code_signing(type: "appstore")
+    build_app(
+		scheme: ENV['GYM_SCHEME'],
+		export_method: "app-store",
+		silent: true
+	)
+	upload_to_testflight(
+		skip_waiting_for_build_processing: true,
+		apple_id: ENV['APPLE_ID']
+	)
+  end
+
+  desc "Will get provisioning profiles for development and releases " + 
+"for the current environment."
+  lane :certify do
+    types = ["development", "appstore"]
+    for type in types
+      match(
+        type: type, 
+        app_identifier: ENV['MATCH_APP_IDENTIFIER']
+      )
+    end
   end
 end
