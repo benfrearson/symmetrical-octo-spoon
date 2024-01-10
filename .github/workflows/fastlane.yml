@@ -11,4 +11,4 @@ jobs:
         with:
             xcode-version: latest
       - uses: actions/checkout@v2
-      - run: bundle exec fastlane tests
+      - run: fastlane tests
