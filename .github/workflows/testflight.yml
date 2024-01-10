@@ -11,4 +11,7 @@ jobs:
         with:
             xcode-version: latest
       - uses: actions/checkout@v2
-      - run: fastlane release
+      - name: Release Testflight
+        env:
+            GIT_PERSONAL_ACCESS_TOKEN: ${{ secrets.GIT_PERSONAL_ACCESS_TOKEN }}
+        run: fastlane release
