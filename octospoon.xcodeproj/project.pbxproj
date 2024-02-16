@@ -32,6 +32,8 @@
 		41D6B6BD2B4D686300627BAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		41D6B6C32B4D686300627BAE /* octospoonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = octospoonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D6B6C72B4D686300627BAE /* octospoonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = octospoonTests.swift; sourceTree = "<group>"; };
+		41F483A02B7F62E400DEBDC3 /* ci_post_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_xcodebuild.sh; sourceTree = "<group>"; };
+		41F483A12B7F62E400DEBDC3 /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		41D6B6AA2B4D686100627BAE = {
 			isa = PBXGroup;
 			children = (
+				41F4839F2B7F62E400DEBDC3 /* ci_scripts */,
 				41D6B6B52B4D686100627BAE /* octospoon */,
 				41D6B6C62B4D686300627BAE /* octospoonTests */,
 				41D6B6B42B4D686100627BAE /* Products */,
@@ -95,6 +98,15 @@
 				41D6B6C72B4D686300627BAE /* octospoonTests.swift */,
 			);
 			path = octospoonTests;
+			sourceTree = "<group>";
+		};
+		41F4839F2B7F62E400DEBDC3 /* ci_scripts */ = {
+			isa = PBXGroup;
+			children = (
+				41F483A02B7F62E400DEBDC3 /* ci_post_xcodebuild.sh */,
+				41F483A12B7F62E400DEBDC3 /* ci_post_clone.sh */,
+			);
+			path = ci_scripts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,7 +359,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"octospoon/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = XXMN7E3GSA;
@@ -380,7 +392,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"octospoon/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = XXMN7E3GSA;

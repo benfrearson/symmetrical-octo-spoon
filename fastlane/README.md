@@ -29,7 +29,7 @@ Run tests
 [bundle exec] fastlane ios release
 ```
 
-Deploy to App Store
+Test and Deploy to App Store
 
 ### ios certify
 
